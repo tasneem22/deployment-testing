@@ -20,7 +20,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'accounts',
     'storage',
-    'comments',
     'thematic_pages',
     'moderators_view',
     'users_view',
@@ -92,7 +91,7 @@ DJOSER = {
         'user_create': 'accounts.serializers.UserCreateSerializer',
         'user': 'accounts.serializers.UserCreateSerializer',
         'PASSWORD_VALIDATORS': [password_validation.validate_password]
-}
+    }
 }
 
 AUTH_PASSWORD_VALIDATORS = [

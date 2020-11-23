@@ -8,11 +8,10 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('auth/', include('accounts.urls')),
-    # Include URL patterns from storage app
+    # Include URL patterns of the storage app.
     url('api/storage/', include('storage.urls')),
-    # Include URL patterns from thematic_pages app
-    url('api/thematic_pages/', include('thematic_pages.urls')),
+    # Include URL patterns of the moderators_view app.
     url('api/moderate/', include('moderators_view.urls')),
+    # Include URL patterns of the users_view app.
     url('api/user_view/', include('users_view.urls')),
-    url('api/', include('comments.urls'))
-]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
